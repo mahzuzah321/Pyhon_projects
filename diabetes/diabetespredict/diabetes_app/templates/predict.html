@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navbar Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+        .navbar {
+            background-color: violet;
+            padding: 10px;
+            text-align: left;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            color: #333;
+        }
+        .content-container {
+            background-color: black;
+            padding: 20px;
+        }
+        form {
+            margin: 20px auto;
+            width: 50%;
+            text-align: center;
+            color: violet;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container-fluid">
+        <span class="navbar-brand">Diabetes Prediction</span>
+    </div>
+</nav>
+
+<div class="content-container">
+    <form method="post">
+        {% csrf_token %}
+        <label for="Pregnancies">Pregnancies:</label><br>
+        <input type="text" id="Pregnancies" name="Pregnancies"><br><br>
+        
+        <label for="Glucose">Glucose:</label><br>
+        <input type="text" id="Glucose" name="Glucose"><br><br>
+        
+        <label for="BloodPressure">Blood Pressure:</label><br>
+        <input type="text" id="BloodPressure" name="BloodPressure"><br><br>
+        
+        <label for="SkinThickness">Skin Thickness:</label><br>
+        <input type="text" id="SkinThickness" name="SkinThickness"><br><br>
+        
+        <label for="Insulin">Insulin:</label><br>
+        <input type="text" id="Insulin" name="Insulin"><br><br>
+        
+        <label for="BMI">BMI:</label><br>
+        <input type="text" id="BMI" name="BMI"><br><br>
+        
+        <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function:</label><br>
+        <input type="text" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction"><br><br>
+        
+        <label for="Age">Age:</label><br>
+        <input type="text" id="Age" name="Age"><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+</div>
+
+</body>
+</html>

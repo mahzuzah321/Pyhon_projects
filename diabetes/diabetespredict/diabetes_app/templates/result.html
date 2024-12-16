@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+        .navbar {
+            background-color: violet;
+            padding: 10px;
+            text-align: left;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            color: #333;
+        }
+        .content-container {
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+            color: violet;
+        }
+        .result {
+            font-size: 36px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container-fluid">
+        <span class="navbar-brand">Diabetes Prediction</span>
+    </div>
+</nav>
+
+<div class="content-container">
+    <h1>Prediction Result</h1>
+    <p class="result">{{ message|safe }}</p>
+    <a href="{% url 'predict' %}" style="color: violet;">Make another prediction</a>
+</div>
+
+</body>
+</html>
